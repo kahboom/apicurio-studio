@@ -14,7 +14,7 @@ enum VerticalNavSubMenuType {
     moduleId: module.id,
     selector: 'vertical-nav',
     templateUrl: 'vertical-nav.component.html',
-    styleUrls: ['vertical-nav.component.css']
+    styleUrls: ['vertical-nav.component.scss']
 })
 export class VerticalNavComponent implements OnInit {
 

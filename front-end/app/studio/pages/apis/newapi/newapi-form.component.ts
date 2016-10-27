@@ -7,7 +7,7 @@ import {Api} from "../../../models/api.model";
     moduleId: module.id,
     selector: 'newapi-form',
     templateUrl: 'newapi-form.component.html',
-    styleUrls: ['newapi-form.component.css']
+    styleUrls: ['newapi-form.component.scss']
 })
 export class NewApiFormComponent {
 

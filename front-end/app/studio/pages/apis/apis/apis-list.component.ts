@@ -7,7 +7,7 @@ import {Api} from "../../../models/api.model";
     moduleId: module.id,
     selector: 'apis-list',
     templateUrl: 'apis-list.component.html',
-    styleUrls: ['apis-list.component.css']
+    styleUrls: ['apis-list.component.scss']
 })
 export class ApisListComponent {
 

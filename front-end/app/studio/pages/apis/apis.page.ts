@@ -41,7 +41,7 @@ class Filters {
     moduleId: module.id,
     selector: 'apis-page',
     templateUrl: 'apis.page.html',
-    styleUrls: ['apis.page.css']
+    styleUrls: ['apis.page.scss']
 })
 export class ApisPageComponent implements OnInit, OnDestroy {
 

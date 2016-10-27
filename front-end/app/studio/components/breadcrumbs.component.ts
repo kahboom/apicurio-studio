@@ -9,7 +9,7 @@ export class Breadcrumb {
     moduleId: module.id,
     selector: 'breadcrumbs',
     templateUrl: 'breadcrumbs.component.html',
-    styleUrls: ['breadcrumbs.component.css']
+    styleUrls: ['breadcrumbs.component.scss']
 })
 export class BreadcrumbsComponent {
 

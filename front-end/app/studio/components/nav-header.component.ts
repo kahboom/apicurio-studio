@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
     moduleId: module.id,
     selector: 'nav-header',
     templateUrl: 'nav-header.component.html',
-    styleUrls: [ 'nav-header.component.css' ]
+    styleUrls: [ 'nav-header.component.scss' ]
 })
 export class NavHeaderComponent implements OnInit {
 

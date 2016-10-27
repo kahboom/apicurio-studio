@@ -8,7 +8,7 @@ import {Api} from "../../models/api.model";
     moduleId: module.id,
     selector: 'newapi-page',
     templateUrl: 'newapi.page.html',
-    styleUrls: ['newapi.page.css']
+    styleUrls: ['newapi.page.scss']
 })
 export class NewApiPageComponent implements OnInit {
 

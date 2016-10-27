@@ -9,7 +9,7 @@ import {ApiCollaborators} from "../../models/api-collaborators";
     moduleId: module.id,
     selector: 'api-detail-page',
     templateUrl: 'api-detail.page.html',
-    styleUrls: ['api-detail.page.css']
+    styleUrls: ['api-detail.page.scss']
 })
 export class ApiDetailPageComponent implements OnInit {
 

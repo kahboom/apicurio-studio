@@ -13,7 +13,7 @@ const SAVED_USERNAME_KEY    = "apiman.studio.pages.login.username";
     moduleId: module.id,
     selector: 'login-page',
     templateUrl: 'login.page.html',
-    styleUrls: ['login.page.css']
+    styleUrls: ['login.page.scss']
 })
 export class LoginPageComponent implements OnInit {
 

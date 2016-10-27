@@ -13,7 +13,7 @@ import {User} from "../../models/user.model";
     moduleId: module.id,
     selector: 'dashboard-page',
     templateUrl: 'dashboard.page.html',
-    styleUrls: ['dashboard.page.css']
+    styleUrls: ['dashboard.page.scss']
 })
 export class DashboardPageComponent implements OnInit {
 

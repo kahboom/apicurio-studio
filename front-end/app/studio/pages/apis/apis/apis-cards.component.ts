@@ -7,7 +7,7 @@ import {Api} from "../../../models/api.model";
     moduleId: module.id,
     selector: 'apis-cards',
     templateUrl: 'apis-cards.component.html',
-    styleUrls: ['apis-cards.component.css']
+    styleUrls: ['apis-cards.component.scss']
 })
 export class ApisCardsComponent {
 
