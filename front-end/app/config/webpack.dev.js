@@ -158,14 +158,7 @@ module.exports = webpackMerge(commonConfig, {
       aggregateTimeout: 300,
       poll: 1000
     },
-    proxy: proxyConfig,
-    outputPath: helpers.root(METADATA.dist),
-    setup: function(app) {
-      app.get('/config.json', function(req, res) {
-        res.json(frontendConfig);
-      });
-
-    }
+    outputPath: helpers.root(METADATA.dist)
   },
 
   /*
