@@ -251,7 +251,7 @@ module.exports = {
         flatten: true
       },
       {
-        from: 'src/assets',
+        from: 'assets',
         to: 'assets'
       }
     ]),
@@ -265,7 +265,7 @@ module.exports = {
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
     new HtmlWebpackPlugin({
-      template: 'src/layout.html',
+      template: 'layout.html',
       chunksSortMode: 'dependency'
     }),
 
