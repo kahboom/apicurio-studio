@@ -82,7 +82,7 @@ module.exports = {
     extensions: ['', '.ts', '.js', '.json'],
 
     // Make sure root is src
-    root: helpers.root('./'),
+    root: helpers.root('studio'),
 
     // remove other default values
     modulesDirectories: ['node_modules']
@@ -109,7 +109,7 @@ module.exports = {
           replace: '$1.import($3).then(mod => mod.__esModule ? mod.default : mod)',
           flags: 'g'
         },
-        include: [helpers.root('src')]
+        include: [helpers.root('studio')]
       }
 
     ],
@@ -169,7 +169,7 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw-loader',
-        exclude: [helpers.root('src/layout.html')]
+        exclude: [helpers.root('layout.html')]
       },
 
       // File loader for supporting images, for example, in CSS files.

@@ -1,4 +1,4 @@
-@import "../studio/colors.less";
+@import '../studio/colors.scss';
 
 
 #api-page-body {
@@ -36,7 +36,7 @@
 }
 
 form input.ng-invalid.ng-touched {
-  border-color: @form-input-invalid;
+  border-color: $form-input-invalid;
 }
 
 .center-text {

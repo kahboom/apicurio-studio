@@ -26,59 +26,6 @@ const METADATA = webpackMerge(commonConfig.metadata, {
   HMR: HMR
 });
 
-// proxyConfig configuration
-const USE_PROXY = process.env.USE_PROXY;
-var proxyConfig = {};
-
-// Set up variables to pass along to the frontend so it can connect to backend services
-const FABRIC8_FORGE = process.env.FABRIC8_FORGE;
-const KUBERNETES_MASTER = process.env.KUBERNETES_MASTER;
-const K8S_PROVIDER = process.env.K8S_PROVIDER || 'kubernetes';
-const FRONTEND_MODE = process.env.FRONTEND_MODE || 'dev';
-
-var frontendConfig = {
-  urls: {
-
-  },
-  k8sProvider: K8S_PROVIDER,
-  frontendMode: FRONTEND_MODE
-};
-// URL for talking to the fabric8 forge service
-if (FABRIC8_FORGE) {
-  frontendConfig['urls']['FABRIC8_FORGE'] = FABRIC8_FORGE;
-}
-// URL to talk to the kubernetes API server
-if (KUBERNETES_MASTER) {
-  frontendConfig['urls']['KUBERNETES_MASTER'] = KUBERNETES_MASTER;
-}
-
-// Set up the backend URLs to either use the proxyConfig or not
-if (USE_PROXY === 'true' && FABRIC8_FORGE) {
-  console.log('Enabling fabric8 forge proxyConfig');
-  proxyConfig['/forge'] = {
-    target: FABRIC8_FORGE + '/api/',
-    secure: false
-  }
-  frontendConfig['urls']['FABRIC8_FORGE'] = '/forge';
-}
-if (USE_PROXY === 'true' && KUBERNETES_MASTER) {
-  console.log('Enabling kubernetes API server proxyConfig');
-  var k8sConfig = proxyConfig['/k8s'] = {
-    target: KUBERNETES_MASTER,
-    secure: false
-  }
-  if (KUBERNETES_MASTER.indexOf('/k8s') > 0) {
-    k8sConfig.pathRewrite = {
-      '^/k8s/': '/'
-    };
-  }
-  frontendConfig['urls']['KUBERNETES_MASTER'] = '/k8s';
-}
-
-console.log("Using frontend configuration: ", frontendConfig);
-console.log("Using proxyConfig configuration: ", proxyConfig);
-console.log("Building to ", METADATA.dist);
-
 
 /**
  * Webpack configuration
@@ -192,7 +139,7 @@ module.exports = webpackMerge(commonConfig, {
   tslint: {
     emitErrors: false,
     failOnHint: false,
-    resourcePath: 'src'
+    resourcePath: 'studio'
   },
 
   /**
