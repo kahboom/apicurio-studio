@@ -61,9 +61,9 @@ module.exports = {
    */
   entry: {
 
-    'polyfills': './src/polyfills.browser.ts',
-    'vendor': './src/vendor.browser.ts',
-    'main': './src/main.browser.ts'
+    'polyfills': './studio/polyfills.browser.ts',
+    'vendor': './studio/vendor.browser.ts',
+    'main': './studio/main.browser.ts'
 
   },
 
@@ -82,7 +82,7 @@ module.exports = {
     extensions: ['', '.ts', '.js', '.json'],
 
     // Make sure root is src
-    root: helpers.root('src'),
+    root: helpers.root('./'),
 
     // remove other default values
     modulesDirectories: ['node_modules']
