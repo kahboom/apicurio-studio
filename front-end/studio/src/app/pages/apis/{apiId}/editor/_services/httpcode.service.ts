@@ -100,7 +100,7 @@ export class HttpCodeService {
     /**
      * Resolves a single code (returns the HttpCode object for a given response code).
      * @param code
-     * @return {any}
+     * @return any
      */
     public getCode(code: string): HttpCode {
         for (let c of this.getCodes()) {

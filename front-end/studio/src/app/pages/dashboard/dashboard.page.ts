@@ -51,12 +51,12 @@ export class DashboardPageComponent extends AbstractPageComponent {
 
     /**
      * C'tor.
-     * @param {ApisService} apis
-     * @param {ActivatedRoute} route
-     * @param {LinkedAccountsService} accountsService
-     * @param {IAuthenticationService} authService
-     * @param {Title} titleService
-     * @param {CurrentUserService} currentUserService
+     * @param ApisService apis
+     * @param ActivatedRoute route
+     * @param LinkedAccountsService accountsService
+     * @param IAuthenticationService authService
+     * @param Title titleService
+     * @param CurrentUserService currentUserService
      */
     constructor(private apis: ApisService, route: ActivatedRoute,
                 private accountsService: LinkedAccountsService,
@@ -68,7 +68,7 @@ export class DashboardPageComponent extends AbstractPageComponent {
 
     /**
      * The page title.
-     * @return {string}
+     * @return string
      */
     protected pageTitle(): string {
         return "Apicurio Studio - Dashboard";
@@ -106,7 +106,7 @@ export class DashboardPageComponent extends AbstractPageComponent {
 
     /**
      * Gets the authenticated user.
-     * @return {Observable<User>}
+     * @return Observable<User>
      */
     public user(): Observable<User> {
         return this.authService.getAuthenticatedUser();

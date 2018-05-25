@@ -41,7 +41,7 @@ export class VerticalNavComponent implements OnInit {
 
     /**
      * C'tor.
-     * @param {Router} router
+     * @param Router router
      */
     constructor(private router: Router) {}
 
@@ -63,9 +63,9 @@ export class VerticalNavComponent implements OnInit {
 
     /**
      * Returns true if the given route is the active route.
-     * @param {string} route
-     * @param {boolean} exact
-     * @return {boolean}
+     * @param string route
+     * @param boolean exact
+     * @return boolean
      */
     public isRouteActive(route: string, exact: boolean = false): boolean {
         return this.router.isActive(route, exact);
@@ -73,7 +73,7 @@ export class VerticalNavComponent implements OnInit {
 
     /**
      * Returns true if the currently active route is the dashboard.
-     * @returns {boolean}
+     * @returns boolean
      */
     isDashboardRoute(): boolean {
         return this.isRouteActive("/", true);
@@ -81,7 +81,7 @@ export class VerticalNavComponent implements OnInit {
 
     /**
      * Returns true if the currently active route is /apis/*
-     * @returns {boolean}
+     * @returns boolean
      */
     isAPIsRoute(): boolean {
         return this.isRouteActive("/apis");
@@ -89,7 +89,7 @@ export class VerticalNavComponent implements OnInit {
 
     /**
      * Returns true if the currently active route is /settings/*
-     * @returns {boolean}
+     * @returns boolean
      */
     isSettingsRoute(): boolean {
         return this.isRouteActive("/settings");

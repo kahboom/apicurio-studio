@@ -96,8 +96,8 @@ export class ApiEditingSession implements IApiEditingSession {
 
     /**
      * Constructor.
-     * @param {EditableApiDefinition} api
-     * @param {WebSocket} socket
+     * @param EditableApiDefinition api
+     * @param WebSocket socket
      */
     constructor(private api: EditableApiDefinition, private socket: WebSocket) {
         this._oasLibrary = new OasLibraryUtils();
@@ -106,7 +106,7 @@ export class ApiEditingSession implements IApiEditingSession {
 
     /**
      * Connects the websocket to the server.
-     * @param {IConnectionHandler} handler
+     * @param IConnectionHandler handler
      */
     connect(handler: IConnectionHandler): void {
         let me: ApiEditingSession = this;
@@ -191,7 +191,7 @@ export class ApiEditingSession implements IApiEditingSession {
 
     /**
      * Called to set the command handler.
-     * @param {ICommandHandler} handler
+     * @param ICommandHandler handler
      */
     commandHandler(handler: ICommandHandler): void {
         this._commandHandler = handler;
@@ -199,7 +199,7 @@ export class ApiEditingSession implements IApiEditingSession {
 
     /**
      * Called to set the activity handler.
-     * @param {IActivityHandler} handler
+     * @param IActivityHandler handler
      */
     activityHandler(handler: IActivityHandler): void {
         this._activityHandler = handler;
@@ -207,7 +207,7 @@ export class ApiEditingSession implements IApiEditingSession {
 
     /**
      * Called to send a command to the server.
-     * @param {ICommand} command
+     * @param ICommand command
      */
     sendCommand(command: OtCommand): void {
         let data: any = {
@@ -222,7 +222,7 @@ export class ApiEditingSession implements IApiEditingSession {
     /**
      * Called to send a selection event.  This is done whenever the local user
      * changes her selection (e.g. in the master view).
-     * @param {string} selection
+     * @param string selection
      */
     sendSelection(selection: string): void {
         let data: any = {
@@ -273,9 +273,9 @@ export class ApisService extends AbstractHubService {
 
     /**
      * Constructor.
-     * @param {HttpClient} http
-     * @param {IAuthenticationService} authService
-     * @param {ConfigService} config
+     * @param HttpClient http
+     * @param IAuthenticationService authService
+     * @param ConfigService config
      */
     constructor(http: HttpClient, authService: IAuthenticationService, config: ConfigService) {
         super(http, authService, config);

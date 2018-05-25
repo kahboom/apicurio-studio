@@ -32,9 +32,9 @@ export class SettingsPageComponent extends AbstractPageComponent {
 
     /**
      * C'tor.
-     * @param {Router} router
-     * @param {ActivatedRoute} route
-     * @param {Title} titleService
+     * @param Router router
+     * @param ActivatedRoute route
+     * @param Title titleService
      */
     constructor(private router: Router, route: ActivatedRoute, titleService: Title) {
         super(route, titleService);
@@ -42,7 +42,7 @@ export class SettingsPageComponent extends AbstractPageComponent {
 
     /**
      * Returns the appropriate page title for this page.
-     * @return {string}
+     * @return string
      */
     protected pageTitle(): string {
         return "Apicurio Studio - Settings";

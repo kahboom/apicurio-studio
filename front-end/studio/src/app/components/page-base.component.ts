@@ -19,6 +19,7 @@ import {OnDestroy, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {Observable} from "rxjs/Observable";
 import {Title} from "@angular/platform-browser";
+import 'rxjs/add/observable/combineLatest';
 
 export class DataMap {
     [key: string]: boolean;
@@ -31,8 +32,8 @@ export abstract class AbstractPageComponent implements OnInit, OnDestroy {
 
     /**
      * C'tor.
-     * @param {ActivatedRoute} route
-     * @param {Title} titleService
+     * @param ActivatedRoute route
+     * @param Title titleService
      */
     constructor(protected route: ActivatedRoute, protected titleService: Title) {
     }
@@ -59,7 +60,7 @@ export abstract class AbstractPageComponent implements OnInit, OnDestroy {
 
     /**
      * Returns the appropriate page title for this page.
-     * @return {string}
+     * @return string
      */
     protected abstract pageTitle(): string;
 
@@ -98,7 +99,7 @@ export abstract class AbstractPageComponent implements OnInit, OnDestroy {
     /**
      * Called to determine whether some page data has been loaded yet.
      * @param key
-     * @return {boolean}
+     * @return boolean
      */
     public isLoaded(key: string): boolean {
         if (this.dataLoaded[key]) {

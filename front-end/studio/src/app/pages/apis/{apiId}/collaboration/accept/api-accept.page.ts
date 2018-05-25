@@ -36,10 +36,10 @@ export class ApiAcceptPageComponent extends AbstractPageComponent {
 
     /**
      * Constructor.
-     * @param {Router} router
-     * @param {ActivatedRoute} route
-     * @param {ApisService} apis
-     * @param {Title} titleService
+     * @param Router router
+     * @param ActivatedRoute route
+     * @param ApisService apis
+     * @param Title titleService
      */
     constructor(private router: Router, route: ActivatedRoute,
                 private apis: ApisService, titleService: Title) {
@@ -48,7 +48,7 @@ export class ApiAcceptPageComponent extends AbstractPageComponent {
 
     /**
      * The page title.
-     * @return {string}
+     * @return string
      */
     protected pageTitle(): string {
         return "Apicurio Studio - Accept Collaboration Invite";

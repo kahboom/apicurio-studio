@@ -25,7 +25,7 @@ export class FindPathItemsVisitor extends OasCombinedVisitorAdapter {
 
     /**
      * C'tor.
-     * @param {string} filterCriteria
+     * @param string filterCriteria
      */
     constructor(private filterCriteria: string) {
         super();
@@ -33,7 +33,7 @@ export class FindPathItemsVisitor extends OasCombinedVisitorAdapter {
 
     /**
      * Called when a path item is visited.
-     * @param {OasPathItem} node
+     * @param OasPathItem node
      */
     visitPathItem(node: OasPathItem): void {
         if (this.acceptThroughFilter(node.path())) {
@@ -53,7 +53,7 @@ export class FindPathItemsVisitor extends OasCombinedVisitorAdapter {
     /**
      * Returns true if the given name is accepted by the current filter criteria.
      * @param name
-     * @return {boolean}
+     * @return boolean
      */
     private acceptThroughFilter(name: string): boolean {
         if (this.filterCriteria === null) {

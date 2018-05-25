@@ -32,8 +32,8 @@ export class NotFoundPageComponent extends AbstractPageComponent {
 
     /**
      * C'tor.
-     * @param {ActivatedRoute} route
-     * @param {Title} titleService
+     * @param ActivatedRoute route
+     * @param Title titleService
      */
     constructor(route: ActivatedRoute, titleService: Title) {
         super(route, titleService);
@@ -41,7 +41,7 @@ export class NotFoundPageComponent extends AbstractPageComponent {
 
     /**
      * The page title.
-     * @return {string}
+     * @return string
      */
     protected pageTitle(): string {
         return "Apicurio Studio - Not Found";

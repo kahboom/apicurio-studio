@@ -75,7 +75,7 @@ export class AddSchemaPropertyDialogComponent {
 
     /**
      * Returns true if the dialog is open.
-     * @return {boolean}
+     * @return boolean
      */
     public isOpen(): boolean {
         return this._isOpen;

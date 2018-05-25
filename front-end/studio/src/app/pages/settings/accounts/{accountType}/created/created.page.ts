@@ -40,10 +40,10 @@ export class CreatedLinkedAccountPageComponent extends AbstractPageComponent {
 
     /**
      * C'tor.
-     * @param {Router} router
-     * @param {ActivatedRoute} route
-     * @param {LinkedAccountsService} accountsApi
-     * @param {Title} titleService
+     * @param Router router
+     * @param ActivatedRoute route
+     * @param LinkedAccountsService accountsApi
+     * @param Title titleService
      */
     constructor(private router: Router, route: ActivatedRoute,
                 private accountsApi: LinkedAccountsService, titleService: Title) {
@@ -52,7 +52,7 @@ export class CreatedLinkedAccountPageComponent extends AbstractPageComponent {
 
     /**
      * The page title.
-     * @return {string}
+     * @return string
      */
     protected pageTitle(): string {
         return "Apicurio Studio - Account Linking";
