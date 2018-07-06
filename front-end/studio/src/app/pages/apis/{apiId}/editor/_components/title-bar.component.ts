@@ -174,7 +174,7 @@ export class EditorTitleBarComponent implements OnInit, OnDestroy, AfterViewInit
 
     /**
      * Returns the title of the API.
-     * @return {string}
+     * @return
      */
     public title(): string {
         if (this.hasTitle()) {
@@ -185,7 +185,7 @@ export class EditorTitleBarComponent implements OnInit, OnDestroy, AfterViewInit
 
     /**
      * Returns true if the API has a title.
-     * @return {boolean}
+     * @return
      */
     public hasTitle(): boolean {
         if (this.document && this.document.info && this.document.info.title) {
